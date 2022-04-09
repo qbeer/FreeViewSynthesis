@@ -1,3 +1,4 @@
 .DS_Store
 **/net*.params
 experiments.tar.gz
+venv/

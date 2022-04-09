@@ -34,7 +34,7 @@ py::array_t<T> create_array1(const std::vector<T>& data) {
         float* new_data = reinterpret_cast<float*>(f);
         delete[] new_data;
     });
-    return py::array_t<T>({data.size()}, new_data, free_data);
+    return py::array_t<T>({long(data.size())}, new_data, free_data);
 }
 
 template <typename T>

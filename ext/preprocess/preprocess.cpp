@@ -265,9 +265,5 @@ get_sampling_map(array_f32_d tgt_dm_np, array_f32_d tgt_K_np,
         }
     }
 
-    return {create_arrayN<float>(maps, {n_views, patch_height, patch_width, 2}),
-            create_arrayN<float>(valid_depth_masks,
-                                 {n_views, 1, patch_height, patch_width}),
-            create_arrayN<float>(valid_map_masks,
-                                 {n_views, 1, patch_height, patch_width})};
+    return std::make_tuple(create_arrayN<float>(maps, {n_views, patch_height, patch_width, 2}), create_arrayN<float>(valid_depth_masks, {n_views, 1, patch_height, patch_width}), create_arrayN<float>(valid_map_masks, {n_views, 1, patch_height, patch_width}));
 }
