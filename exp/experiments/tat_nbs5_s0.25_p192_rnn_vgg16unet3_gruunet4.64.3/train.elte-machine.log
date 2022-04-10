@@ -1,0 +1,1389 @@
+[2022-04-10/15:13/INFO/mytorch] Set seed to 42
+[2022-04-10/15:13/INFO/mytorch] ================================================================================
+[2022-04-10/15:13/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:13/INFO/mytorch] 2022-04-10 15:13:35
+[2022-04-10/15:13/INFO/mytorch] host: elte-machine
+[2022-04-10/15:13/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:13/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7fab149c7e50>
+    eval_frequency: <co.mytorch.Frequency object at 0x7fab149c7b50>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7fab149db610>
+[2022-04-10/15:13/INFO/mytorch] ================================================================================
+[2022-04-10/15:13/INFO/exp] Create eval datasets
+[2022-04-10/15:13/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:22/INFO/mytorch] Set seed to 42
+[2022-04-10/15:22/INFO/mytorch] ================================================================================
+[2022-04-10/15:22/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:22/INFO/mytorch] 2022-04-10 15:22:55
+[2022-04-10/15:22/INFO/mytorch] host: elte-machine
+[2022-04-10/15:22/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:22/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f343e01b9a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f343e01bb20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f343e01b100>
+[2022-04-10/15:22/INFO/mytorch] ================================================================================
+[2022-04-10/15:22/INFO/exp] Create eval datasets
+[2022-04-10/15:22/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:23/INFO/mytorch] Set seed to 42
+[2022-04-10/15:23/INFO/mytorch] ================================================================================
+[2022-04-10/15:23/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:23/INFO/mytorch] 2022-04-10 15:23:42
+[2022-04-10/15:23/INFO/mytorch] host: elte-machine
+[2022-04-10/15:23/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:23/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7fa386b019a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7fa386b01b20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7fa386b01100>
+[2022-04-10/15:23/INFO/mytorch] ================================================================================
+[2022-04-10/15:23/INFO/exp] Create eval datasets
+[2022-04-10/15:23/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:23/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:23/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:23/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:23/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:23/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:23/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:23/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:23/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:23/INFO/mytorch] 
+[2022-04-10/15:23/INFO/mytorch] ================================================================================
+[2022-04-10/15:23/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:23/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:23/INFO/mytorch] 2022-04-10 15:23:58
+[2022-04-10/15:23/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:25/INFO/mytorch] Set seed to 42
+[2022-04-10/15:25/INFO/mytorch] ================================================================================
+[2022-04-10/15:25/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:25/INFO/mytorch] 2022-04-10 15:25:42
+[2022-04-10/15:25/INFO/mytorch] host: elte-machine
+[2022-04-10/15:25/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:25/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f9defa859a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f9defa85b20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f9defa85520>
+[2022-04-10/15:25/INFO/mytorch] ================================================================================
+[2022-04-10/15:25/INFO/exp] Create eval datasets
+[2022-04-10/15:25/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:25/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:25/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:25/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:25/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:25/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:25/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:25/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:25/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:25/INFO/mytorch] 
+[2022-04-10/15:25/INFO/mytorch] ================================================================================
+[2022-04-10/15:25/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:25/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:25/INFO/mytorch] 2022-04-10 15:25:47
+[2022-04-10/15:25/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:28/INFO/mytorch] Set seed to 42
+[2022-04-10/15:28/INFO/mytorch] ================================================================================
+[2022-04-10/15:28/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:28/INFO/mytorch] 2022-04-10 15:28:56
+[2022-04-10/15:28/INFO/mytorch] host: elte-machine
+[2022-04-10/15:28/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:28/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f15e32479a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f15e3247b20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f15e3247100>
+[2022-04-10/15:28/INFO/mytorch] ================================================================================
+[2022-04-10/15:28/INFO/exp] Create eval datasets
+[2022-04-10/15:28/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:28/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:28/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:28/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:28/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:28/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:28/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:28/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:28/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:28/INFO/mytorch] 
+[2022-04-10/15:28/INFO/mytorch] ================================================================================
+[2022-04-10/15:28/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:28/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:28/INFO/mytorch] 2022-04-10 15:28:59
+[2022-04-10/15:28/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:29/INFO/mytorch] Set seed to 42
+[2022-04-10/15:29/INFO/mytorch] ================================================================================
+[2022-04-10/15:29/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:29/INFO/mytorch] 2022-04-10 15:29:31
+[2022-04-10/15:29/INFO/mytorch] host: elte-machine
+[2022-04-10/15:29/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:29/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f3c1a36a9a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f3c1a36ab20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f3c1a36a520>
+[2022-04-10/15:29/INFO/mytorch] ================================================================================
+[2022-04-10/15:29/INFO/exp] Create eval datasets
+[2022-04-10/15:29/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:29/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:29/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:29/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:29/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:29/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:29/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:29/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:29/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:29/INFO/mytorch] 
+[2022-04-10/15:29/INFO/mytorch] ================================================================================
+[2022-04-10/15:29/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:29/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:29/INFO/mytorch] 2022-04-10 15:29:34
+[2022-04-10/15:29/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:30/INFO/mytorch] Set seed to 42
+[2022-04-10/15:30/INFO/mytorch] ================================================================================
+[2022-04-10/15:30/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:30/INFO/mytorch] 2022-04-10 15:30:09
+[2022-04-10/15:30/INFO/mytorch] host: elte-machine
+[2022-04-10/15:30/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:30/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f9088f8a9a0>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f9088f8ab20>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f9088f8a100>
+[2022-04-10/15:30/INFO/mytorch] ================================================================================
+[2022-04-10/15:30/INFO/exp] Create eval datasets
+[2022-04-10/15:30/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:30/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:30/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:30/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:30/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:30/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:30/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:30/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:30/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:30/INFO/mytorch] 
+[2022-04-10/15:30/INFO/mytorch] ================================================================================
+[2022-04-10/15:30/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:30/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:30/INFO/mytorch] 2022-04-10 15:30:12
+[2022-04-10/15:30/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:30/INFO/mytorch] eval x/749999: 1/25: loss=1.7374=0.2608+0.2579+0.3650+0.3572+0.2495+0.2470 (1.7374) | 04%/02s/01m02s
+[2022-04-10/15:31/INFO/mytorch] Set seed to 42
+[2022-04-10/15:31/INFO/mytorch] ================================================================================
+[2022-04-10/15:31/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:31/INFO/mytorch] 2022-04-10 15:31:49
+[2022-04-10/15:31/INFO/mytorch] host: elte-machine
+[2022-04-10/15:31/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:31/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7f0f90403760>
+    eval_frequency: <co.mytorch.Frequency object at 0x7f101132e9d0>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7f0f8fcba2e0>
+[2022-04-10/15:31/INFO/mytorch] ================================================================================
+[2022-04-10/15:31/INFO/exp] Create eval datasets
+[2022-04-10/15:31/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:31/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:31/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:31/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:31/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:31/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:31/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:31/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:31/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:31/INFO/mytorch] 
+[2022-04-10/15:31/INFO/mytorch] ================================================================================
+[2022-04-10/15:31/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:31/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:31/INFO/mytorch] 2022-04-10 15:31:52
+[2022-04-10/15:31/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:31/INFO/mytorch] eval x/749999: 1/25: loss=1.7374=0.2608+0.2579+0.3650+0.3572+0.2495+0.2470 (1.7374) | 04%/02s/57s
+[2022-04-10/15:32/INFO/mytorch] Set seed to 42
+[2022-04-10/15:32/INFO/mytorch] ================================================================================
+[2022-04-10/15:32/INFO/mytorch] Start cmd "eval": tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+[2022-04-10/15:32/INFO/mytorch] 2022-04-10 15:32:57
+[2022-04-10/15:32/INFO/mytorch] host: elte-machine
+[2022-04-10/15:32/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:32/INFO/mytorch] worker env:
+    experiments_root: experiments
+    experiment_name: tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    n_train_iters: 750000
+    seed: 42
+    train_batch_size: 1
+    train_batch_acc_steps: 1
+    eval_batch_size: 1
+    num_workers: 8
+    save_frequency: <co.mytorch.Frequency object at 0x7fb4a6330760>
+    eval_frequency: <co.mytorch.Frequency object at 0x7fb52725b9d0>
+    train_device: cuda:0
+    eval_device: cuda:0
+    clip_gradient_value: None
+    clip_gradient_norm: None
+    empty_cache_per_batch: False
+    log_debug: []
+    train_iter_messages: []
+    stopwatch: 
+    train_dsets: ['tat']
+    eval_dsets: ['tat-subseq']
+    train_n_nbs: 5
+    train_nbs_mode: argmax
+    train_scale: 0.25
+    train_patch: 192
+    eval_n_nbs: 5
+    eval_scale: 0.5
+    bwd_depth_thresh: 0.01
+    invalid_depth_to_inf: True
+    train_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    eval_loss: VGGPerceptualLoss(
+  (vgg): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (24): ReLU(inplace=True)
+    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (26): ReLU(inplace=True)
+    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): ReLU(inplace=True)
+    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (33): ReLU(inplace=True)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): ReLU(inplace=True)
+    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+)
+    exp_out_root: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3
+    db_path: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/exp.elte-machine.db
+    db_logger: <co.sqlite.Logger object at 0x7fb4a5be72e0>
+[2022-04-10/15:32/INFO/mytorch] ================================================================================
+[2022-04-10/15:32/INFO/exp] Create eval datasets
+[2022-04-10/15:32/INFO/exp]   create dataset for tat_subseq_training_Truck
+[2022-04-10/15:32/INFO/dataset]     #tgt_im_paths=25, #tgt_counts=(25, 226), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:32/INFO/exp]   create dataset for tat_subseq_intermediate_M60
+[2022-04-10/15:32/INFO/dataset]     #tgt_im_paths=36, #tgt_counts=(36, 277), tgt_im=(3, 560, 1088), tgt_dm=(560, 1088)
+[2022-04-10/15:32/INFO/exp]   create dataset for tat_subseq_intermediate_Playground
+[2022-04-10/15:32/INFO/dataset]     #tgt_im_paths=32, #tgt_counts=(32, 275), tgt_im=(3, 560, 1008), tgt_dm=(560, 1008)
+[2022-04-10/15:32/INFO/exp]   create dataset for tat_subseq_intermediate_Train
+[2022-04-10/15:32/INFO/dataset]     #tgt_im_paths=43, #tgt_counts=(43, 258), tgt_im=(3, 560, 992), tgt_dm=(560, 992)
+[2022-04-10/15:32/INFO/mytorch] [EVAL] loading net for iter last: experiments/tat_nbs5_s0.25_p192_rnn_vgg16unet3_gruunet4.64.3/net_0000000000749999.params
+[2022-04-10/15:33/INFO/mytorch] 
+[2022-04-10/15:33/INFO/mytorch] ================================================================================
+[2022-04-10/15:33/INFO/mytorch] Evaluating set tat_subseq_training_Truck
+[2022-04-10/15:33/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:33/INFO/mytorch] 2022-04-10 15:33:00
+[2022-04-10/15:33/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 1/25: loss=1.7374=0.2608+0.2579+0.3650+0.3572+0.2495+0.2470 (1.7374) | 04%/02s/01m00s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 2/25: loss=1.7609=0.2637+0.2671+0.3742+0.3626+0.2535+0.2399 (1.7492) | 08%/03s/47s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 3/25: loss=1.6777=0.2494+0.2615+0.3624+0.3444+0.2366+0.2235 (1.7254) | 12%/05s/42s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 4/25: loss=1.5774=0.2094+0.2444+0.3469+0.3350+0.2295+0.2123 (1.6884) | 16%/06s/38s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 5/25: loss=1.6217=0.2034+0.2626+0.3650+0.3434+0.2328+0.2144 (1.6750) | 20%/08s/35s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 6/25: loss=1.6712=0.2200+0.2541+0.3624+0.3537+0.2462+0.2347 (1.6744) | 24%/09s/33s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 7/25: loss=1.7761=0.2321+0.2618+0.3784+0.3842+0.2689+0.2508 (1.6889) | 27%/10s/31s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 8/25: loss=1.6965=0.1953+0.2533+0.3703+0.3743+0.2611+0.2421 (1.6899) | 32%/12s/29s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 9/25: loss=1.6901=0.1962+0.2579+0.3772+0.3743+0.2549+0.2296 (1.6899) | 36%/13s/27s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 10/25: loss=1.5612=0.1889+0.2309+0.3453+0.3467+0.2352+0.2142 (1.6770) | 40%/15s/25s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 11/25: loss=1.5835=0.1886+0.2394+0.3534+0.3503+0.2387+0.2132 (1.6685) | 44%/16s/24s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 12/25: loss=1.4929=0.1709+0.2367+0.3425+0.3324+0.2202+0.1902 (1.6539) | 48%/17s/22s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 13/25: loss=1.5600=0.1877+0.2355+0.3490+0.3449+0.2361+0.2068 (1.6467) | 52%/19s/20s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 14/25: loss=1.7507=0.2215+0.2582+0.3753+0.3804+0.2689+0.2464 (1.6541) | 55%/20s/19s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 15/25: loss=1.8520=0.2617+0.2678+0.3909+0.3981+0.2824+0.2511 (1.6673) | 60%/22s/17s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 16/25: loss=1.7409=0.2366+0.2565+0.3772+0.3746+0.2590+0.2368 (1.6719) | 64%/23s/16s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 17/25: loss=1.6144=0.1858+0.2340+0.3511+0.3540+0.2527+0.2369 (1.6685) | 68%/24s/14s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 18/25: loss=1.6031=0.1908+0.2277+0.3477+0.3535+0.2483+0.2350 (1.6649) | 72%/26s/13s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 19/25: loss=1.6284=0.2106+0.2317+0.3543+0.3577+0.2475+0.2266 (1.6630) | 76%/27s/11s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 20/25: loss=1.5722=0.2084+0.2169+0.3388+0.3442+0.2400+0.2239 (1.6584) | 80%/29s/10s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 21/25: loss=1.6051=0.2141+0.2205+0.3439+0.3496+0.2425+0.2345 (1.6559) | 84%/30s/08s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 22/25: loss=1.7441=0.2454+0.2418+0.3759+0.3763+0.2598+0.2449 (1.6599) | 88%/31s/07s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 23/25: loss=1.9004=0.2997+0.2673+0.3959+0.3976+0.2785+0.2613 (1.6703) | 92%/33s/05s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 24/25: loss=2.0080=0.3300+0.2919+0.4125+0.4159+0.2887+0.2689 (1.6844) | 96%/34s/04s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 25/25: loss=1.6152=0.2022+0.2572+0.3644+0.3473+0.2340+0.2101 (1.6816) | 100%/35s/02s
+[2022-04-10/15:33/INFO/exp] 
+rgb
+dist1_mean=0.15116
+distpsnr_mean=-22.21713
+distssim_mean=-0.87592
+[2022-04-10/15:33/INFO/mytorch] timings: callback: 02.537s, data: 01.160s, forward: 30.546s, loss: 01.869s, total: 36.132s
+[2022-04-10/15:33/INFO/mytorch] avg eval_loss=1.6816=0.2229+0.2494+0.3648+0.3621+0.2506+0.2318
+[2022-04-10/15:33/INFO/mytorch] 
+[2022-04-10/15:33/INFO/mytorch] ================================================================================
+[2022-04-10/15:33/INFO/mytorch] Evaluating set tat_subseq_intermediate_M60
+[2022-04-10/15:33/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:33/INFO/mytorch] 2022-04-10 15:33:36
+[2022-04-10/15:33/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 1/36: loss=1.1866=0.1312+0.1692+0.2585+0.2654+0.1845+0.1777 (1.1866) | 02%/02s/01m50s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 2/36: loss=1.6614=0.2315+0.2270+0.3422+0.3583+0.2487+0.2537 (1.4240) | 05%/04s/01m23s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 3/36: loss=1.9328=0.3098+0.2476+0.3708+0.4017+0.2916+0.3113 (1.5936) | 08%/06s/01m13s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 4/36: loss=2.1513=0.4255+0.2648+0.3954+0.4384+0.3101+0.3170 (1.7330) | 11%/07s/01m06s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 5/36: loss=2.2134=0.4364+0.2662+0.3984+0.4517+0.3250+0.3357 (1.8291) | 13%/09s/01m01s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 6/36: loss=2.3377=0.4478+0.2780+0.4166+0.4809+0.3465+0.3679 (1.9139) | 16%/10s/58s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 7/36: loss=2.8251=0.7055+0.3284+0.4576+0.5376+0.3847+0.4114 (2.0440) | 19%/12s/55s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 8/36: loss=2.9843=0.8210+0.3421+0.4606+0.5476+0.3918+0.4212 (2.1616) | 22%/13s/52s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 9/36: loss=2.7855=0.7291+0.3298+0.4388+0.5204+0.3728+0.3946 (2.2309) | 25%/15s/50s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 10/36: loss=2.7058=0.7209+0.3216+0.4266+0.5075+0.3568+0.3723 (2.2784) | 27%/17s/47s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 11/36: loss=2.9537=0.8090+0.3467+0.4566+0.5457+0.3856+0.4100 (2.3398) | 30%/18s/45s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 12/36: loss=2.7137=0.6090+0.3348+0.4586+0.5314+0.3769+0.4031 (2.3709) | 33%/20s/43s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 13/36: loss=2.6309=0.5584+0.3278+0.4527+0.5226+0.3703+0.3989 (2.3909) | 36%/21s/41s
+[2022-04-10/15:33/INFO/mytorch] eval x/749999: 14/36: loss=2.8922=0.7571+0.3417+0.4753+0.5398+0.3756+0.4027 (2.4267) | 38%/23s/39s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 15/36: loss=2.9408=0.7564+0.3388+0.4885+0.5494+0.3866+0.4212 (2.4610) | 41%/24s/37s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 16/36: loss=2.5471=0.4940+0.2904+0.4399+0.5061+0.3819+0.4347 (2.4664) | 44%/26s/36s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 17/36: loss=2.6000=0.4925+0.2952+0.4455+0.5167+0.3986+0.4515 (2.4742) | 47%/27s/34s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 18/36: loss=2.6178=0.4816+0.3007+0.4609+0.5212+0.3977+0.4557 (2.4822) | 50%/29s/32s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 19/36: loss=2.6460=0.4832+0.3038+0.4685+0.5262+0.4015+0.4628 (2.4908) | 52%/30s/30s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 20/36: loss=2.5007=0.4196+0.2988+0.4625+0.5065+0.3838+0.4295 (2.4913) | 55%/32s/29s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 21/36: loss=2.4670=0.3913+0.3011+0.4594+0.5066+0.3844+0.4241 (2.4902) | 58%/33s/27s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 22/36: loss=2.4523=0.4058+0.3040+0.4584+0.5000+0.3740+0.4101 (2.4885) | 61%/35s/25s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 23/36: loss=2.5954=0.4450+0.3235+0.4879+0.5283+0.3901+0.4208 (2.4931) | 63%/37s/24s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 24/36: loss=2.4938=0.4082+0.3143+0.4735+0.5084+0.3796+0.4099 (2.4931) | 66%/38s/22s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 25/36: loss=2.3900=0.3693+0.3097+0.4712+0.4937+0.3582+0.3880 (2.4890) | 69%/40s/20s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 26/36: loss=2.2667=0.3402+0.3036+0.4626+0.4696+0.3339+0.3568 (2.4805) | 72%/41s/19s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 27/36: loss=2.1721=0.2947+0.2993+0.4544+0.4555+0.3219+0.3464 (2.4690) | 75%/43s/17s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 28/36: loss=2.0703=0.2740+0.2828+0.4306+0.4348+0.3122+0.3358 (2.4548) | 77%/44s/16s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 29/36: loss=2.1558=0.3008+0.2974+0.4436+0.4532+0.3256+0.3352 (2.4445) | 80%/46s/14s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 30/36: loss=2.1273=0.3061+0.2941+0.4316+0.4449+0.3236+0.3269 (2.4339) | 83%/47s/12s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 31/36: loss=2.6336=0.4827+0.3379+0.4879+0.5335+0.3911+0.4006 (2.4404) | 86%/49s/11s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 32/36: loss=2.0159=0.2663+0.2867+0.4273+0.4305+0.3046+0.3005 (2.4271) | 88%/50s/09s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 33/36: loss=2.0096=0.2652+0.2800+0.4152+0.4264+0.3086+0.3142 (2.4144) | 91%/52s/07s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 34/36: loss=2.1170=0.3188+0.2816+0.4128+0.4449+0.3234+0.3355 (2.4057) | 94%/54s/06s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 35/36: loss=1.9029=0.2644+0.2630+0.3833+0.4037+0.2917+0.2968 (2.3913) | 97%/55s/04s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 36/36: loss=1.9480=0.2790+0.3095+0.4347+0.4033+0.2641+0.2574 (2.3790) | 100%/57s/03s
+[2022-04-10/15:34/INFO/exp] 
+rgb
+dist1_mean=0.30555
+distpsnr_mean=-17.13615
+distssim_mean=-0.78548
+[2022-04-10/15:34/INFO/mytorch] timings: callback: 03.972s, data: 01.813s, forward: 48.626s, loss: 02.898s, total: 57.316s
+[2022-04-10/15:34/INFO/mytorch] avg eval_loss=2.3790=0.4509+0.2984+0.4364+0.4781+0.3461+0.3692
+[2022-04-10/15:34/INFO/mytorch] 
+[2022-04-10/15:34/INFO/mytorch] ================================================================================
+[2022-04-10/15:34/INFO/mytorch] Evaluating set tat_subseq_intermediate_Playground
+[2022-04-10/15:34/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:34/INFO/mytorch] 2022-04-10 15:34:33
+[2022-04-10/15:34/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 1/32: loss=1.8135=0.2073+0.2949+0.4151+0.4111+0.2693+0.2158 (1.8135) | 03%/02s/01m26s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 2/32: loss=1.8573=0.2232+0.3022+0.4236+0.4197+0.2716+0.2170 (1.8354) | 06%/04s/01m06s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 3/32: loss=1.8073=0.2264+0.2916+0.4055+0.4077+0.2621+0.2139 (1.8261) | 09%/05s/57s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 4/32: loss=1.8115=0.2718+0.2820+0.3923+0.3973+0.2596+0.2084 (1.8224) | 12%/06s/52s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 5/32: loss=1.8419=0.2683+0.2882+0.4028+0.4095+0.2653+0.2078 (1.8263) | 15%/08s/48s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 6/32: loss=1.7197=0.2736+0.2679+0.3768+0.3749+0.2395+0.1869 (1.8085) | 18%/09s/45s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 7/32: loss=1.6390=0.2392+0.2652+0.3710+0.3573+0.2255+0.1808 (1.7843) | 21%/11s/43s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 8/32: loss=1.6893=0.2638+0.2827+0.3893+0.3594+0.2212+0.1729 (1.7724) | 25%/12s/41s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 9/32: loss=1.6129=0.1857+0.2844+0.3903+0.3590+0.2225+0.1709 (1.7547) | 28%/14s/38s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 10/32: loss=1.5531=0.1602+0.2694+0.3708+0.3525+0.2273+0.1728 (1.7346) | 31%/15s/37s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 11/32: loss=1.6168=0.1833+0.2775+0.3772+0.3629+0.2345+0.1814 (1.7238) | 34%/16s/35s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 12/32: loss=1.6793=0.2227+0.2828+0.3834+0.3680+0.2369+0.1855 (1.7201) | 37%/18s/33s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 13/32: loss=1.7579=0.2661+0.2853+0.3898+0.3769+0.2478+0.1920 (1.7230) | 40%/19s/31s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 14/32: loss=1.7919=0.2423+0.2862+0.3973+0.3903+0.2630+0.2129 (1.7280) | 43%/21s/30s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 15/32: loss=1.7354=0.2125+0.2752+0.3893+0.3873+0.2598+0.2113 (1.7285) | 46%/22s/28s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 16/32: loss=1.7949=0.2541+0.2761+0.3916+0.3939+0.2656+0.2136 (1.7326) | 50%/23s/26s
+[2022-04-10/15:34/INFO/mytorch] eval x/749999: 17/32: loss=1.8805=0.3183+0.2816+0.3938+0.3990+0.2712+0.2166 (1.7413) | 53%/25s/25s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 18/32: loss=1.9373=0.3599+0.2836+0.3959+0.4032+0.2735+0.2211 (1.7522) | 56%/26s/23s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 19/32: loss=1.7957=0.2585+0.2768+0.3924+0.3938+0.2634+0.2107 (1.7545) | 59%/28s/22s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 20/32: loss=1.6520=0.1869+0.2741+0.3838+0.3743+0.2442+0.1887 (1.7494) | 62%/29s/20s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 21/32: loss=1.6293=0.1866+0.2762+0.3827+0.3650+0.2358+0.1830 (1.7436) | 65%/30s/19s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 22/32: loss=1.5891=0.1846+0.2687+0.3742+0.3578+0.2296+0.1742 (1.7366) | 68%/32s/17s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 23/32: loss=1.5603=0.1614+0.2585+0.3710+0.3577+0.2323+0.1794 (1.7290) | 71%/33s/16s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 24/32: loss=1.6736=0.2401+0.2619+0.3756+0.3682+0.2428+0.1849 (1.7266) | 75%/35s/14s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 25/32: loss=1.7283=0.2457+0.2624+0.3783+0.3817+0.2590+0.2012 (1.7267) | 78%/36s/13s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 26/32: loss=1.6886=0.2895+0.2474+0.3588+0.3625+0.2430+0.1873 (1.7252) | 81%/38s/11s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 27/32: loss=1.5870=0.2165+0.2373+0.3478+0.3540+0.2402+0.1911 (1.7201) | 84%/39s/10s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 28/32: loss=1.6563=0.2932+0.2358+0.3419+0.3517+0.2408+0.1929 (1.7178) | 87%/40s/08s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 29/32: loss=1.6143=0.2924+0.2276+0.3346+0.3429+0.2320+0.1848 (1.7143) | 90%/42s/07s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 30/32: loss=1.6281=0.2969+0.2304+0.3386+0.3446+0.2324+0.1852 (1.7114) | 93%/43s/05s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 31/32: loss=1.7887=0.3755+0.2407+0.3519+0.3635+0.2512+0.2059 (1.7139) | 96%/45s/04s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 32/32: loss=1.5603=0.2759+0.2140+0.3204+0.3288+0.2298+0.1914 (1.7091) | 100%/46s/02s
+[2022-04-10/15:35/INFO/exp] 
+rgb
+dist1_mean=0.16702
+distpsnr_mean=-22.32460
+distssim_mean=-0.84929
+[2022-04-10/15:35/INFO/mytorch] timings: callback: 03.149s, data: 01.526s, forward: 39.599s, loss: 02.333s, total: 46.626s
+[2022-04-10/15:35/INFO/mytorch] avg eval_loss=1.7091=0.2463+0.2684+0.3784+0.3743+0.2466+0.1951
+[2022-04-10/15:35/INFO/mytorch] 
+[2022-04-10/15:35/INFO/mytorch] ================================================================================
+[2022-04-10/15:35/INFO/mytorch] Evaluating set tat_subseq_intermediate_Train
+[2022-04-10/15:35/INFO/mytorch] --------------------------------------------------------------------------------
+[2022-04-10/15:35/INFO/mytorch] 2022-04-10 15:35:20
+[2022-04-10/15:35/INFO/mytorch] Eval iter 749999
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 1/43: loss=2.2860=0.4071+0.3157+0.4551+0.4700+0.3198+0.3183 (2.2860) | 02%/03s/02m12s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 2/43: loss=2.4691=0.5562+0.3335+0.4433+0.4734+0.3311+0.3315 (2.3775) | 04%/04s/01m37s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 3/43: loss=1.7341=0.3786+0.2227+0.3182+0.3431+0.2388+0.2327 (2.1630) | 06%/05s/01m23s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 4/43: loss=1.6276=0.3660+0.2207+0.2968+0.3186+0.2181+0.2074 (2.0292) | 09%/07s/01m15s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 5/43: loss=1.4698=0.2122+0.2101+0.3106+0.3221+0.2139+0.2008 (1.9173) | 11%/08s/01m09s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 6/43: loss=2.8756=0.4807+0.3668+0.5501+0.6190+0.4302+0.4288 (2.0770) | 13%/10s/01m05s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 7/43: loss=3.3614=0.7419+0.4473+0.6106+0.6624+0.4578+0.4415 (2.2605) | 16%/11s/01m02s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 8/43: loss=4.1689=1.4172+0.5107+0.6586+0.6965+0.4555+0.4303 (2.4991) | 18%/12s/59s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 9/43: loss=4.0187=1.3610+0.4872+0.6329+0.6726+0.4411+0.4239 (2.6679) | 20%/14s/57s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 10/43: loss=3.2860=0.8127+0.4384+0.5901+0.6148+0.4199+0.4102 (2.7297) | 23%/15s/55s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 11/43: loss=2.1220=0.3743+0.3000+0.4165+0.4315+0.3022+0.2975 (2.6745) | 25%/17s/52s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 12/43: loss=1.9000=0.3068+0.2720+0.3814+0.3961+0.2778+0.2658 (2.6099) | 27%/18s/50s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 13/43: loss=1.9679=0.3288+0.2787+0.3939+0.4083+0.2857+0.2726 (2.5605) | 30%/19s/49s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 14/43: loss=1.8928=0.2643+0.2802+0.3987+0.4051+0.2789+0.2654 (2.5128) | 32%/21s/47s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 15/43: loss=2.1967=0.3414+0.3351+0.4563+0.4568+0.3143+0.2928 (2.4918) | 34%/22s/45s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 16/43: loss=2.3798=0.4376+0.3544+0.4749+0.4764+0.3287+0.3078 (2.4848) | 37%/24s/43s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 17/43: loss=2.4587=0.4429+0.3592+0.4906+0.4949+0.3426+0.3284 (2.4832) | 39%/25s/42s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 18/43: loss=2.7767=0.6034+0.3942+0.5324+0.5343+0.3651+0.3474 (2.4995) | 41%/26s/40s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 19/43: loss=3.3215=0.9279+0.4350+0.5816+0.5909+0.3994+0.3868 (2.5428) | 44%/28s/38s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 20/43: loss=3.0771=0.7190+0.4191+0.5657+0.5831+0.3984+0.3918 (2.5695) | 46%/29s/37s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 21/43: loss=3.0232=0.5279+0.4348+0.6014+0.6225+0.4280+0.4086 (2.5911) | 48%/31s/35s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 22/43: loss=2.7113=0.4182+0.4326+0.5892+0.5602+0.3662+0.3448 (2.5966) | 51%/32s/34s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 23/43: loss=2.2683=0.3728+0.3396+0.4776+0.4622+0.3140+0.3021 (2.5823) | 53%/33s/32s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 24/43: loss=1.9107=0.3280+0.2537+0.3789+0.3943+0.2797+0.2760 (2.5543) | 55%/35s/30s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 25/43: loss=1.6184=0.3347+0.1986+0.3002+0.3301+0.2322+0.2226 (2.5169) | 58%/36s/29s
+[2022-04-10/15:35/INFO/mytorch] eval x/749999: 26/43: loss=1.8177=0.4648+0.2137+0.3151+0.3443+0.2414+0.2384 (2.4900) | 60%/38s/27s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 27/43: loss=1.8695=0.2861+0.2355+0.3820+0.4026+0.2837+0.2796 (2.4670) | 62%/39s/26s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 28/43: loss=1.7517=0.2603+0.2309+0.3683+0.3761+0.2602+0.2560 (2.4415) | 65%/40s/24s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 29/43: loss=2.1887=0.3205+0.2800+0.4449+0.4727+0.3333+0.3374 (2.4328) | 67%/42s/23s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 30/43: loss=2.4096=0.3694+0.3168+0.4796+0.5173+0.3613+0.3652 (2.4320) | 69%/43s/21s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 31/43: loss=2.4593=0.3506+0.3314+0.4955+0.5318+0.3744+0.3757 (2.4329) | 72%/45s/20s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 32/43: loss=2.6293=0.4208+0.3573+0.5145+0.5558+0.3881+0.3927 (2.4390) | 74%/46s/18s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 33/43: loss=2.5237=0.3929+0.3575+0.5063+0.5370+0.3659+0.3642 (2.4416) | 76%/47s/17s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 34/43: loss=2.5065=0.3773+0.3458+0.5033+0.5431+0.3661+0.3708 (2.4435) | 79%/49s/15s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 35/43: loss=2.6697=0.4392+0.3554+0.5126+0.5672+0.3940+0.4013 (2.4499) | 81%/50s/14s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 36/43: loss=2.4192=0.4317+0.3130+0.4739+0.5063+0.3435+0.3509 (2.4491) | 83%/52s/13s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 37/43: loss=2.3653=0.3996+0.3136+0.4803+0.5026+0.3386+0.3306 (2.4468) | 86%/53s/11s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 38/43: loss=2.6159=0.4662+0.3969+0.5423+0.5335+0.3437+0.3334 (2.4513) | 88%/54s/10s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 39/43: loss=3.1551=0.7389+0.4724+0.6117+0.5923+0.3802+0.3595 (2.4693) | 90%/56s/08s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 40/43: loss=2.5979=0.4780+0.3722+0.5125+0.5327+0.3573+0.3452 (2.4725) | 93%/57s/07s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 41/43: loss=1.8297=0.2974+0.2543+0.3663+0.3917+0.2653+0.2546 (2.4569) | 95%/59s/05s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 42/43: loss=1.7183=0.3123+0.2358+0.3390+0.3588+0.2413+0.2310 (2.4393) | 97%/01m00s/04s
+[2022-04-10/15:36/INFO/mytorch] eval x/749999: 43/43: loss=1.4261=0.2285+0.1967+0.2904+0.3084+0.2055+0.1965 (2.4157) | 100%/01m01s/02s
+[2022-04-10/15:36/INFO/exp] 
+rgb
+dist1_mean=0.32314
+distpsnr_mean=-17.46439
+distssim_mean=-0.75953
+[2022-04-10/15:36/INFO/mytorch] timings: callback: 04.151s, data: 02.005s, forward: 52.817s, loss: 03.134s, total: 01m02.118s
+[2022-04-10/15:36/INFO/mytorch] avg eval_loss=2.4157=0.4767+0.3307+0.4661+0.4864+0.3322+0.3237

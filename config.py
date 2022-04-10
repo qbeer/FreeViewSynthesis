@@ -60,4 +60,4 @@ dtu_source_ind = [idx for idx in range(49) if idx not in dtu_interpolation_ind +
 lpips_root = None
 
 # TODO: adjust path
-tat_root = Path("/path/to/colmap_tat/")
+tat_root = Path("/mnt/storage/datasets/tanks_and_temples/")

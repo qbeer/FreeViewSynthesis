@@ -1,6 +1,6 @@
 import numpy as np
 import skimage.measure
-
+from skimage.metrics import structural_similarity as compare_ssim
 
 class Metric(object):
     def __init__(self):
@@ -148,13 +148,13 @@ class SSIMMetric(BaseDistanceMetric):
             ta = ma * ta
         for bidx in range(es.shape[0]):
             if self.mode == "default":
-                ssim = skimage.measure.compare_ssim(
+                ssim = compare_ssim(
                     es[bidx], ta[bidx], multichannel=True, data_range=self.data_range
                 )
             elif self.mode == "dv":
                 ssim = 0
                 for c in range(3):
-                    ssim += skimage.measure.compare_ssim(
+                    ssim += compare_ssim(
                         es[bidx, ..., c],
                         ta[bidx, ..., c],
                         gaussian_weights=True,
